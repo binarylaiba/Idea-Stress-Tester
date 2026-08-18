@@ -1,0 +1,26 @@
+optimist_task:
+  description: >
+    Analyze the user idea: {idea}.
+    Outline 3 strong reasons why it can succeed, its core value proposition, and viral upside.
+  expected_output: >
+    A structured 3-bullet breakdown detailing market upside and competitive leverage.
+  agent: optimist_agent
+
+critic_task:
+  description: >
+    Critically analyze the user idea: {idea}.
+    List 3 critical failure points, unit economics risks, and operational hurdles that could kill the idea.
+  expected_output: >
+    A structured 3-bullet breakdown of critical vulnerabilities and risks.
+  agent: critic_agent
+
+arbiter_task:
+  description: >
+    Review arguments from both the Visionary and the Skeptic.
+    Provide:
+    1. Viability Score (e.g. 74/100)
+    2. Executive Verdict
+    3. Top 3 Actionable Fixes before launching.
+  expected_output: >
+    A formatted markdown report with Viability Score, executive summary, and 3 priority action items.
+  agent: arbiter_agent
